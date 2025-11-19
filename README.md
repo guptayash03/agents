@@ -1,4 +1,4 @@
-# 🎙️ LiveKit Voice Agent — Interruption Handling Layer
+# 🎙️ LiveKit Voice Agent — Interruption Handling Layer + Bonus Section
 ### 🔥 **NSUT Internship Assignment — Final Submission - By Yash Gupta**
 
 This project enhances a standard LiveKit voice agent by adding an **interruption handling layer** which intelligently distinguishes between *filler utterances* and *real interruption commands* while strictly keeping LiveKit’s internal VAD untouched.
@@ -34,7 +34,7 @@ Below is the complete directory layout:
 ### 🔹 1. New Module: `interrupt_handler/`
 | File | Description |
 |------|-------------|
-| `constants.py` | Lists of filler words, command words, and ASR thresholds |
+| `constants.py` | Lists of Multilingual filler words, command words, and ASR thresholds |
 | `middleware.py` | Main Core logic to classify Speech transcripts into filler/speech/command and handle interruptions |
 | `utils.py` | Text normalization, word matching, helper utilities |
 
@@ -62,7 +62,7 @@ The system now uses:
 ## 🚀 What Features Works  (✅ Verified): 
 
 - **Filler Suppression While Agent Speaks**  
-  Words like *“umm”, “haan”, “uhh”, “hmm”* are ignored when the agent is speaking to avoid false interruptions.
+  Multi-language Words like *“umm”, “arey”, “acha”, “haan”, “uhh”, “hmm”* are ignored when the agent is speaking to avoid false interruptions.
 
 - **Command-Based Interruption**  
   Commands such as *“stop”, “wait”, “hold on”, “pause”* immediately interrupt the agent’s speech and return control to the user.
@@ -132,6 +132,15 @@ https://agents-playground.livekit.io/
 
 ## Then Login --> And Connect to the Agent
 ```
+---
+
+### 🎯 Multi-language Support (Bonus)
+The interrupt handler includes bilingual filler detection (English + Hindi).
+Examples:
+- "umm haan" → ignored during agent speech
+- "arey stop" → treated as real interruption
+- "achha wait" → immediate command interruption
+
 ---
 
 ##  🛠️ Environment Details

@@ -5,6 +5,11 @@ This project enhances a standard LiveKit voice agent by adding an **interruption
 
 ---
 
+
+https://github.com/user-attachments/assets/8f7513ee-d1dd-47e9-9087-72a9cb493f3e
+
+---
+
 ## 🗂 Project Structure
 
 Below is the complete directory layout:
